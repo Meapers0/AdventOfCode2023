@@ -10,17 +10,14 @@
 int adder = 0;
 void find_digit(const std::string& line);
 
-int main()
-{
+int main() {
     std::string line;
     std::ifstream input_file("day1_input.txt");
-    if (!input_file.is_open())
-    {
+    if (!input_file.is_open()) {
         std::cerr << "Error opening file... check path" << std::endl;
         return 1;
     }
-    if (input_file.is_open())
-    {
+    if (input_file.is_open()) {
         while (std::getline(input_file, line)) {
             find_digit(line);
         }
